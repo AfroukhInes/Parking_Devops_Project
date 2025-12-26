@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  reservation:
+    build: ./reservation-service
+    ports:
+      - "3002:3002"
+
+  billing:
+    build: ./billing-service
+    ports:
+      - "3003:3003"
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"

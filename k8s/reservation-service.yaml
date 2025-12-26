@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reservation-service
+  namespace: parking
+spec:
+  selector:
+    app: reservation
+  type: NodePort
+  ports:
+  - port: 3002
+    targetPort: 3002
+    nodePort: 32002
