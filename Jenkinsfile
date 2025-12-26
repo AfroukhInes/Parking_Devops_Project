@@ -3,12 +3,11 @@ pipeline {
 
   stages {
 
-
     stage('Build Docker images') {
       steps {
         sh 'docker build -t reservation ./reservation-service'
         sh 'docker build -t billing ./billing-service'
-        sh 'docker build -t frontend ./frontend'
+        sh 'docker build -t frontend -f frontend/Dockerfile frontend'
       }
     }
 
