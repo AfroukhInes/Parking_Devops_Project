@@ -91,7 +91,7 @@ app.post("/reserve", async (req, res) => {
   res.json({
     message: "reservation ok",
     code,
-    ticket: `http://localhost:3002/ticket/${code}`
+    ticket: `http://localhost:32002/ticket/${code}`
   });
 });
 
@@ -214,6 +214,6 @@ app.get("/reservation/:code", (req, res) => {
   res.json(r);
 });
 
-app.listen(3002, () =>
+app.listen(32002, () =>
   console.log("📌 Reservation service running on 3002")
 );
